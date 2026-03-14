@@ -1,0 +1,109 @@
+:root {
+  --mainColor: rgb(227, 197, 144);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    DM Sans,
+    sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Forum;
+}
+.mainColor {
+  color: var(--mainColor);
+}
+.imageProperty {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainBtn {
+  border: 1px solid var(--mainColor);
+  border-radius: 6px;
+  padding: 12px 25px;
+  display: block;
+  max-width: fit-content;
+  margin-inline: auto;
+  letter-spacing: 1.2px;
+  position: relative;
+  overflow: hidden;
+}
+.mainBtn::before,
+.mainBtn::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  background-color: var(--mainColor);
+  position: absolute;
+  left: 0;
+  transition-duration: 0.5s;
+}
+.mainBtn::before {
+  top: -50%;
+}
+.mainBtn::after {
+  bottom: -50%;
+}
+
+.mainBtn:hover::before {
+  top: 0;
+}
+.mainBtn:hover::after {
+  bottom: 0;
+}
+.mainBtn span {
+  color: var(--mainColor);
+  position: relative;
+  z-index: 2;
+  transition-duration: 0.5s;
+}
+.mainBtn:hover span {
+  color: black;
+}
+
+a .underLine span {
+  height: 1px;
+  background-color: var(--mainColor);
+  display: block;
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+a:hover .underLine span {
+  transform: scaleX(1);
+}
+
+.underLine.active span {
+  transform: scaleX(1);
+}
+
+.underLine span:first-child {
+  margin-bottom: 2px;
+}
+.head .image {
+  width: 100px;
+  margin-inline: auto;
+}
+.link{
+  width: fit-content;
+  margin-inline: auto;
+}
+.link a {
+  color: white;
+  transition-duration: 0.5s;
+  font-weight: 500;
+}
+.link a:hover,
+.link a.active {
+  color: var(--mainColor);
+}

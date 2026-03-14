@@ -1,0 +1,135 @@
+@media (max-width: 1300px) {
+  /* global */
+  .mainBtn {
+    padding: 10px 20px;
+  }
+  .mainBtn span {
+    font-size: 15px;
+  }
+  /* header */
+  .My-carousel-inner .My-carousel-item h2 {
+    font-size: 30px;
+  }
+  .My-carousel-inner .My-carousel-item p {
+    font-size: 12px;
+  }
+  /* About-Us */
+  #About .content {
+    width: 80%;
+  }
+  #About .title .globalHeader {
+    font-size: 30px;
+  }
+  #About .row,
+  #About .part:nth-of-type(2) {
+    margin-top: 0px;
+  }
+  /*---------------------------------- OUR STORY------------------------------- */
+  #Our_Story .title .globalHeader {
+    font-size: 30px;
+  }
+  #Our_Story .part:nth-of-type(1) .item {
+    width: 100%;
+  }
+  #Our_Story .part:nth-of-type(2) {
+    margin-top: 20px;
+  }
+  #Our_Story .part:nth-of-type(2) .item .box {
+    width: 100%;
+  }
+  #Our_Story .part:nth-of-type(2) .item .cornerTop {
+    transform: translateX(0);
+  }
+  #Our_Story .part:nth-of-type(2) .item .cornerTop .images {
+    width: 80%;
+  }
+  #Our_Story .part:nth-of-type(2) .item .box .imageBackBottom {
+    left: 10%;
+    bottom: 0px;
+    width: 50px;
+  }
+
+  #Our_Story .part:nth-of-type(2) .item .box .mainImageBottom {
+    width: 100px;
+    left: 0;
+    bottom: 20px;
+  }
+  #Special .part:nth-of-type(1) {
+    height: 100vh;
+  }
+  #contact .mainBox {
+    width: 95%;
+  }
+}
+@media (min-width: 371px) and (max-width: 1300px) {
+  /* header */
+  .My-carousel-inner .My-carousel-item h2 {
+    font-size: 40px;
+  }
+  .My-carousel-inner .My-carousel-item p {
+    font-size: 15px;
+  }
+  /*---------------------------------- OUR STORY------------------------------- */
+  #Our_Story .part:nth-of-type(2) .item .box .imageBackBottom {
+    left: 10%;
+
+    width: 65px;
+  }
+
+  #Our_Story .part:nth-of-type(2) .item .box .mainImageBottom {
+    width: 140px;
+
+    bottom: 20px;
+  }
+  #contact .mainBox {
+    width: 75%;
+  }
+}
+@media (min-width: 577px) and (max-width: 1300px) {
+  /*---------------------------------- OUR STORY------------------------------- */
+  #Our_Story .part:nth-of-type(2) .item .box .imageBackBottom {
+    left: 10%;
+
+    width: 80px;
+  }
+
+  #Our_Story .part:nth-of-type(2) .item .box .mainImageBottom {
+    width: 160px;
+
+    bottom: 25px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1300px) {
+  /* header */
+  .My-carousel-inner .My-carousel-item h2 {
+    font-size: 50px;
+  }
+  .My-carousel-inner .My-carousel-item p {
+    font-size: 18px;
+  }
+  /*---------------------------------- OUR STORY------------------------------- */
+  #Our_Story .part:nth-of-type(2) .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  #Our_Story .part:nth-of-type(2) .item .box .imageBackBottom {
+    left: 10%;
+    width: 90px;
+  }
+  #Our_Story .part:nth-of-type(2) .item .box .mainImageBottom {
+    width: 180px;
+    bottom: 25px;
+  }
+  #contact .mainBox {
+    width: 65%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1300px) {
+  #contact .mainBox {
+    width: 50%;
+  }
+}
+@media (min-width: 1181px) and (max-width: 1300px) {
+}

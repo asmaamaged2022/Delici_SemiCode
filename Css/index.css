@@ -1,0 +1,473 @@
+/* ---------------------Nav------------------------- */
+nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+nav .btnNav {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+nav .btnNav span {
+  height: 2px;
+  transform-origin: left;
+  background-color: white;
+  animation-name: nav_animate;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+nav .btnNav span:nth-of-type(1) {
+  transform: scaleX(0.2);
+  animation-delay: 0.5s;
+}
+nav .btnNav span:nth-of-type(2) {
+  animation-delay: 0.1s;
+  transform: scaleX(0.4);
+}
+nav .btnNav span:nth-of-type(3) {
+  animation-delay: 0.3s;
+  transform: scaleX(0.3);
+}
+/* ---------------------header------------------------- */
+#My-carousel {
+  position: relative;
+}
+#My-carousel > button {
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid var(--mainColor);
+  color: var(--mainColor);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  transition-duration: 0.5s;
+}
+#My-carousel > button:hover {
+  background-color: var(--mainColor);
+  color: black;
+}
+#My-carousel > button i {
+  transform: rotate(-45deg);
+}
+#My-carousel > button.prev {
+  left: 3%;
+}
+#My-carousel > button.next {
+  right: 3%;
+}
+#My-carousel {
+  overflow: hidden;
+}
+.My-carousel-inner .My-carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(1.1);
+  transition-duration: 1s;
+}
+.My-carousel-inner .My-carousel-item.active {
+  z-index: 3;
+  transform: scale(1);
+}
+.My-carousel-inner .My-carousel-item:nth-of-type(1) {
+  background-image: url("../images/slider-1.jpg");
+}
+.My-carousel-inner .My-carousel-item:nth-of-type(2) {
+  background-image: url("../images/slider-2.jpg");
+}
+.My-carousel-inner .My-carousel-item:nth-of-type(3) {
+  background-image: url("../images/slider-3.jpg");
+}
+.My-carousel-inner .My-carousel-item .content > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition-duration: 1s;
+}
+.My-carousel-inner .My-carousel-item::after {
+  content: "";
+  display: block;
+  inset: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.3);
+  pointer-events: none;
+  opacity: 1;
+  transition-duration: 1s;
+}
+.My-carousel-inner .My-carousel-item.active::after {
+  opacity: 0;
+}
+.My-carousel-inner .My-carousel-item.active .content > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.My-carousel-inner .My-carousel-item.active .content .head {
+  transition-delay: 0.2s;
+}
+.My-carousel-inner .My-carousel-item.active .content h2 {
+  transition-delay: 0.4s;
+}
+.My-carousel-inner .My-carousel-item.active .content p {
+  transition-delay: 0.6s;
+}
+.My-carousel-inner .My-carousel-item.active .content a {
+  transition-delay: 0.8s;
+}
+.My-carousel-inner .My-carousel-item h6 {
+  letter-spacing: 1.2px;
+}
+.My-carousel-inner .My-carousel-item h2 {
+  font-size: 80px;
+}
+.My-carousel-inner .My-carousel-item p {
+  font-size: 20px;
+}
+#My-carousel .book {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  z-index: 100;
+  background-color: var(--mainColor);
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  cursor: pointer;
+}
+#My-carousel .book .image {
+  width: 50%;
+  margin: auto;
+}
+#My-carousel .book p {
+  font-size: 12px;
+}
+#My-carousel .book::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid var(--mainColor);
+  animation: book_animate 10s linear infinite;
+}
+#My-carousel .indicators {
+  right: 20px;
+  bottom: 20px;
+  position: absolute;
+  z-index: 100;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 80px;
+}
+#My-carousel .indicators span {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+  cursor: pointer;
+}
+#My-carousel .indicators span.active {
+  background-color: var(--mainColor);
+}
+/* ---------------------About-Us------------------------- */
+#About {
+  background-image: url("../images/bg.png");
+  background-color: #0e0d0c;
+  position: relative;
+}
+#About .backImages {
+  position: absolute;
+  animation: About_Animate 2s linear infinite;
+}
+#About .backImages.imgTop {
+  right: 0;
+  top: 0;
+}
+#About .backImages.imgBottom {
+  left: 0;
+  bottom: 0;
+}
+#About .container {
+  position: relative;
+  z-index: 2;
+}
+#About .content {
+  width: 40%;
+  margin-inline: auto;
+}
+#About .title .globalHeader {
+  font-size: 50px;
+}
+#About .row {
+  margin-top: -100px;
+}
+#About .part:nth-of-type(2) {
+  margin-top: 100px;
+}
+#About .part .item {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+#About .part .item .imageBack {
+  width: 150px;
+  transform: rotateY(0deg);
+  transition-duration: 0.8s;
+}
+#About .part .item:hover .imageBack {
+  transform: rotateY(180deg);
+}
+#About .part .item .mainImage {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#About .part .item::after {
+  content: "";
+  display: block;
+  height: 100px;
+  width: 250%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: -200%;
+  left: 0;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  transition-duration: 0.8s;
+}
+#About .part .item:hover::after {
+  top: 200%;
+}
+/*---------------------------------- OUR STORY------------------------------- */
+#Our_Story .title .globalHeader {
+  font-size: 60px;
+}
+#Our_Story .part:nth-of-type(1) .item {
+  width: 80%;
+  margin: auto;
+}
+#Our_Story .part:nth-of-type(2) .item .box {
+  width: 90%;
+  position: relative;
+}
+#Our_Story .part:nth-of-type(2) .item .cornerTop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-20%);
+  z-index: 5;
+}
+#Our_Story .part:nth-of-type(2) .item .cornerTop .imageBack {
+  position: absolute;
+  top: 0;
+  right: 0;
+  animation: book_animate 10s linear infinite;
+}
+#Our_Story .part:nth-of-type(2) .item .box .imageBackBottom {
+  position: absolute;
+  left: 10%;
+  bottom: -20px;
+  width: 100px;
+  z-index: 5;
+}
+#Our_Story .part:nth-of-type(2) .item .box .mainImageBottom {
+  position: absolute;
+  width: 200px;
+  left: 0;
+  bottom: 15px;
+  z-index: 6;
+}
+/* ---------------------SPECIAL DISH------------------------- */
+#Special .part:nth-of-type(1) {
+  background-image: url("../images/special-dish.jpg");
+}
+#Special .part:nth-of-type(2) {
+  background-image: url("../images/bg.png");
+}
+#Special .part:nth-of-type(2) .head .image {
+  margin: initial;
+}
+#Special .part:nth-of-type(2) .mainBtn {
+  margin-inline: initial;
+}
+#Special .part:nth-of-type(2) .part1 img {
+  animation: Special_Animate 2s linear infinite;
+}
+/* ---------------------Chef------------------------- */
+#Chefs {
+  background-image: url("../images/bg.png");
+}
+#Chefs .globalHeader {
+  font-size: 50px;
+}
+
+#Chefs .item .top {
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+#Chefs .item .top img {
+  cursor: pointer;
+  width: 280px;
+  height: 400px;
+  transition-duration: 1s;
+}
+#Chefs .item .top:hover img {
+  transform: scale(1.05) rotate(2deg);
+}
+#Chefs .item .top .layout {
+  position: absolute;
+  inset: 0;
+  transform: scale(0);
+  transition-duration: 1s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#Chefs .item .top:hover .layout {
+  transform: scale(1);
+}
+#Chefs .item .top .layout ul {
+  opacity: 0;
+}
+#Chefs .item .top:hover .layout ul {
+  opacity: 1;
+  transition-delay: 0.5s;
+  transition-duration: 1s;
+}
+#Chefs .item .top .layout li {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+
+#Chefs .item .top .layout li:nth-of-type(1) i {
+  color: #1877f2;
+}
+
+#Chefs .item .top .layout li:nth-of-type(2) i {
+  color: white;
+}
+#Chefs .item .top .layout li:nth-of-type(3) i {
+  color: #e4405f;
+}
+#Chefs .item .top .layout li:nth-of-type(4) i {
+  color: #0a66c2;
+}
+#Chefs .item .top .layout li:nth-of-type(1):hover i,
+#Chefs .item .top .layout li:nth-of-type(3):hover i,
+#Chefs .item .top .layout li:nth-of-type(4):hover i {
+  color: white;
+}
+#Chefs .item .top .layout li:nth-of-type(2):hover i {
+  color: black;
+}
+#Chefs .item .top .layout li:nth-of-type(1):hover {
+  background-color: #1877f2;
+}
+
+#Chefs .item .top .layout li:nth-of-type(2):hover {
+  background-color: white;
+}
+#Chefs .item .top .layout li:nth-of-type(3):hover {
+  background-color: #e4405f;
+}
+#Chefs .item .top .layout li:nth-of-type(4):hover {
+  background-color: #0a66c2;
+}
+/* ---------------------contact------------------------- */
+#contact {
+  background-image: url("../images/contact-bg.jpg");
+  position: relative;
+}
+#contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#contact .container {
+  position: relative;
+  z-index: 2;
+}
+#contact .mainBox {
+  background-image: url("../images/bg.png");
+  position: relative;
+  width: 50%;
+}
+#contact .mainBox::after,
+#contact .mainBox::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  top: 0;
+  background-image: url("../images/pattern-9.svg");
+}
+#contact .mainBox::after {
+  right: 0;
+}
+#contact .mainBox::before {
+  left: 0;
+}
+#contact .mainBox .decoration li {
+  width: 10px;
+  height: 10px;
+  animation: book_animate 10s linear infinite;
+  border: 2px solid var(--mainColor);
+}
+#contact .mainBox form input,
+#contact .mainBox form textarea {
+  background-color: transparent;
+  color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+}
+#contact .mainBox form textarea {
+  height: 150px;
+  resize: none;
+}
+#contact .mainBox form input:focus,
+#contact .mainBox form textarea:focus {
+  box-shadow: 0 0 0 0.25rem rgba(227, 197, 144, 0.25);
+  border: 1px solid var(--mainColor);
+}
+#contact .mainBox form input::placeholder,
+#contact .mainBox form textarea::placeholder {
+  color: rgba(227, 197, 144, 0.5);
+}
+#contact .mainBox form .mainBtn {
+  max-width: initial;
+  background-color: transparent;
+}
+footer {
+  position: relative;
+  z-index: 3;
+  color: white;
+}
