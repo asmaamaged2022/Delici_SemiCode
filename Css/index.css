@@ -45,6 +45,10 @@ nav .btnNav span:nth-of-type(3) {
   transform: scaleX(0.3);
 }
 /* ---------------------header------------------------- */
+header{
+  height: 100vh;
+  height: 100dvh;
+}
 #My-carousel {
   position: relative;
 }
