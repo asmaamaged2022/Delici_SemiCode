@@ -1,0 +1,172 @@
+.popup {
+  background-color: rgb(227, 197, 144, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100vh;
+  z-index: -1;
+  overflow-y: auto;
+  transition-duration: 0.8s;
+}
+.popup.active {
+  z-index: 1000;
+}
+.popup[data-type="booking"] .box {
+  width: 600px;
+  margin: 30px auto auto;
+  color: var(--gray);
+  position: relative;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition-duration: 1s;
+}
+.popup[data-type="booking"].show .box {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.popup[data-type="booking"] .box i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+.popup[data-type="booking"] .box h2 {
+  font-size: 40px;
+}
+.popup[data-type="booking"] .box a span {
+  font-size: 16px;
+}
+.popup[data-type="booking"] .box form input,
+.popup[data-type="booking"] .box form textarea,
+.popup[data-type="booking"] .box form button {
+  background-color: transparent;
+}
+.popup[data-type="booking"] .box form input::placeholder,
+.popup[data-type="booking"] .box form textarea::placeholder,
+.popup[data-type="booking"] .box form input[type="datetime-local"] {
+  color: var(--mainColor);
+}
+.popup[data-type="booking"] .box form input,
+.popup[data-type="booking"] .box form textarea,
+.popup[data-type="booking"] .box form input[type="datetime-local"] {
+  border-color: var(--mainColor);
+  color: var(--mainColor);
+}
+
+.popup[data-type="booking"] .box form input:focus,
+.popup[data-type="booking"] .box form textarea:focus,
+.popup[data-type="booking"] .box form input[type="datetime-local"]:focus {
+  border-color: var(--mainColor);
+  box-shadow: 0 0 0 0.25rem rgba(227, 197, 144, 0.25);
+  border: 1px solid var(--mainColor);
+}
+.popup[data-type="booking"] .box form textarea {
+  resize: none;
+  height: 200px;
+}
+/* --------------------------------Said bar------------------------------ */
+.popup[data-type="links"] .box {
+  width: 400px;
+  background-image: url(../images/bg.png);
+  position: relative;
+  transform: translateX(-100px);
+  opacity: 0;
+  transition-duration: 1s;
+}
+.popup[data-type="links"].show .box {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.popup[data-type="links"] .box > i,
+.popup[data-type="meals"] .box > i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+.popup[data-type="links"] .box .image2 {
+  width: 130px;
+}
+.popup[data-type="links"] .box .decoration.active {
+  width: 10px;
+  height: 10px;
+  display: block;
+  animation: book_animate 10s linear infinite;
+  border: 2px solid var(--mainColor);
+  flex-shrink: 0;
+}
+.popup[data-type="links"] .box li {
+  border-top: 1px solid white;
+  width: 100%;
+  padding-block: 10px;
+}
+.popup[data-type="links"] .box li:last-child {
+  border-bottom: 1px solid white;
+}
+/* --------------------------------Meals------------------------------ */
+.popup[data-type="meals"] .box {
+  width: 600px;
+  margin: 30px auto;
+  position: relative;
+  transform: translateY(-100px);
+  opacity: 0;
+  transition-duration: 1s;
+}
+.popup[data-type="meals"].show .box {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.popup[data-type="meals"] .box .data {
+  position: relative;
+}
+.popup[data-type="meals"] .box .data .image {
+  height: 300px;
+  width: 100%;
+}
+.popup[data-type="meals"] .box .data .image img {
+  height: 100%;
+  width: 100%;
+}
+.popup[data-type="meals"] .box .data .price {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: var(--mainColor);
+  color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10px 20px;
+}
+.popup[data-type="meals"] .box .content p {
+  color: var(--gray);
+}
+.popup[data-type="meals"] .box > button {
+  font-size: 16px;
+  background-color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+  color: white;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  transition-duration: 0.5s;
+}
+.popup[data-type="meals"] .box > button i {
+  transform: rotate(-45deg);
+}
+.popup[data-type="meals"] .box > button.prevmeal {
+  left: 10%;
+}
+.popup[data-type="meals"] .box > button.nextmeal {
+  right: 10%;
+}

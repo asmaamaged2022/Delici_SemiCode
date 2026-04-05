@@ -1,10 +1,13 @@
 /* ---------------------Nav------------------------- */
 nav {
-  position: absolute;
   width: 100%;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: 200;
+  transition-duration: .5s;
+}
+nav.scrolled{
+  background-color: #000000;
 }
 nav .container {
   display: flex;
@@ -42,10 +45,6 @@ nav .btnNav span:nth-of-type(3) {
   transform: scaleX(0.3);
 }
 /* ---------------------header------------------------- */
-header{
-  height: 100vh;
-  height: 100dvh;
-}
 #My-carousel {
   position: relative;
 }
@@ -235,6 +234,9 @@ header{
   position: relative;
   overflow: hidden;
 }
+#About .part .description a {
+  color: var(--mainColor);
+}
 #About .part .item .imageBack {
   width: 150px;
   transform: rotateY(0deg);
@@ -272,6 +274,9 @@ header{
 #Our_Story .part:nth-of-type(1) .item {
   width: 80%;
   margin: auto;
+}
+#Our_Story .part:nth-of-type(1) .item a {
+  color: var(--mainColor);
 }
 #Our_Story .part:nth-of-type(2) .item .box {
   width: 90%;
@@ -320,6 +325,151 @@ header{
 #Special .part:nth-of-type(2) .part1 img {
   animation: Special_Animate 2s linear infinite;
 }
+/* ---------------------Menu------------------------- */
+#Menu {
+  position: relative;
+  overflow: hidden;
+}
+#Menu .backImages {
+  position: absolute;
+  animation: About_Animate 4s linear infinite;
+}
+#Menu .backImages.imgTop {
+  left: 0;
+  top: 0;
+}
+#Menu .backImages.imgBottom {
+  right: 0;
+  bottom: 0;
+}
+#Menu .container {
+  position: relative;
+}
+#Menu .globalHeader {
+  font-size: 50px;
+}
+#Menu .links {
+  border-block: 1px solid var(--gray);
+  overflow-x: auto;
+}
+#Menu .links ul {
+  width: fit-content;
+}
+#Menu .links li {
+  cursor: pointer;
+}
+#Menu .decoration {
+  width: 10px;
+  height: 10px;
+  display: block;
+  animation: book_animate 10s linear infinite;
+  border: 2px solid var(--mainColor);
+  margin-inline: 30px;
+  flex-shrink: 0;
+}
+#Menu .content .row {
+  position: relative;
+}
+#Menu .content .row .line {
+  display: block;
+  width: 0;
+  border-left: 1px solid var(--gray);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+}
+#Menu .content .row .line.show {
+  opacity: 1;
+}
+#Menu .content .row .box .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  transform: translate(-60px, -30px);
+  opacity: 0;
+  transition-duration: 1s;
+}
+#Menu .content .row.active .box .item {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+#Menu .content .row.active .part1 .box .item:nth-of-type(2) {
+  transition-delay: 0.2s;
+}
+#Menu .content .row.active .part1 .box .item:nth-of-type(3) {
+  transition-delay: 0.4s;
+}
+#Menu .content .row.active .part2 .box .item:nth-of-type(1) {
+  transition-delay: 0.6s;
+}
+#Menu .content .row.active .part2 .box .item:nth-of-type(2) {
+  transition-delay: 0.8s;
+}
+#Menu .content .row.active .part2 .box .item:nth-of-type(3) {
+  transition-delay: 1s;
+}
+#Menu .content .row .box .item .image {
+  width: 20%;
+  height: 100px;
+  position: relative;
+  cursor: pointer;
+}
+#Menu .content .row .box .item .image img {
+  transition-duration: 0.5s;
+  transform: scale(1);
+  width: 100%;
+  height: 100%;
+}
+#Menu .content .row .box .item:hover .image img {
+  transform: scale(1.2);
+}
+#Menu .content .row .box .item .image .layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  transition-duration: 0.5s;
+}
+#Menu .content .row .box .item:hover .image .layout {
+  background-color: rgba(227, 197, 144, 0.7);
+}
+#Menu .content .row .box .item .image .layout i {
+  transform: rotate(0deg) scale(0);
+  transition-duration: 0.5s;
+}
+#Menu .content .row .box .item:hover .image .layout i {
+  transform: rotate(180deg) scale(1.5);
+}
+#Menu .content .row .box .item .image .layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Menu .content .row .box .item .info {
+  color: var(--gray);
+}
+#Menu .content .row .box .item .info .head {
+  display: flex;
+  align-items: center;
+}
+#Menu .content .row .box .item .info .head .lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+#Menu .content .row .box .item .info .head .lines span {
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray);
+}
+
 /* ---------------------Chef------------------------- */
 #Chefs {
   background-image: url("../images/bg.png");
@@ -424,7 +574,7 @@ header{
 #contact .mainBox {
   background-image: url("../images/bg.png");
   position: relative;
-  width: 50%;
+  width: 40%;
 }
 #contact .mainBox::after,
 #contact .mainBox::before {

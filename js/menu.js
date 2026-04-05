@@ -224,6 +224,7 @@ var Drinks = [
     miniDescription: "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
+  
 ];
 
 var allMenu = [...BreakFast, ...Lunch, ...Dinner, ...Drinks];

@@ -6,25 +6,26 @@
     <link rel="icon" type="images/x-icon" href="images/secLogo.jpg" id="Icon" />
     <title>DELICI</title>
     <meta property="og:title" content="DELICI" />
-   <meta
-  property="og:description"
-  content="Enjoy delicious flavors, fresh ingredients, and a cozy dining experience. Discover our menu and taste the difference today."
-/>
-    <meta property="og:url" content="https://asmaamaged2022.github.io/Delici_SemiCode_SemiCode/" />
-    <meta property="og:image" content="https://asmaamaged2022.github.io/Delici_SemiCode/images/secLogo.jpg" />
+    <meta
+      property="og:description"
+      content="Explore my projects, skills, and journey as a passionate web developer and computer science student."
+    />
+    <meta property="og:url" content="https://asmaamaged2022.github.io/DELICI_SemiCode/" />
+    <meta property="og:image" content="https://asmaamaged2022.github.io/DELICI_SemiCode/images/secLogo.jpg" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="DELICI" />
     <link rel="stylesheet" href="Css/bootstrap.css" />
     <link rel="stylesheet" href="Css/all.min.css" />
     <link rel="stylesheet" href="Css/fonts.css" />
+    <link rel="stylesheet" href="Css/popups.css" />
     <link rel="stylesheet" href="Css/global.css" />
     <link rel="stylesheet" href="Css/index.css" />
     <link rel="stylesheet" href="Css/keyframes.css" />
     <link rel="stylesheet" href="Css/index.responsive.css" />
   </head>
   <body>
-    <nav>
-      <div class="container py-4">
+    <nav class="position-fixed">
+      <div class="container py-3">
         <div class="image"><img src="images/logo.png" alt="" class="img-fluid" /></div>
         <div class="links d-none d-xl-block my-auto">
           <ul class="list-unstyled d-flex justify-content-between mb-0">
@@ -62,7 +63,7 @@
             </li>
             <li class="me-4">
               <div class="link">
-                <a class="text-decoration-none" href="#"
+                <a class="text-decoration-none" href="#Menu"
                   >Menu
                   <div class="underLine w-100"><span></span><span></span></div
                 ></a>
@@ -72,8 +73,8 @@
               <div class="link">
                 <a class="text-decoration-none" href="#Chefs"
                   >Our Chefs
-                  <div class="underLine w-100"><span></span><span></span></div></a
-                ><
+                  <div class="underLine w-100"><span></span><span></span></div
+                ></a>
               </div>
             </li>
             <li>
@@ -86,14 +87,14 @@
             </li>
           </ul>
         </div>
-        <div class="btnNav">
+        <div class="btnNav" onclick="openPopup('links')">
           <span></span>
           <span></span>
           <span></span>
         </div>
       </div>
     </nav>
-    <header id="Home" >
+    <header id="Home" class="vh-100">
       <div id="My-carousel" class="h-100">
         <div class="My-carousel-inner h-100">
           <div class="My-carousel-item active imageProperty text-center h-100" data-index="0">
@@ -153,7 +154,7 @@
         </div>
         <button class="sc-carousel-button prev d-none d-lg-flex"><i class="fa-solid fa-chevron-left"></i></button>
         <button class="sc-carousel-button next d-none d-lg-flex"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="book text-center">
+        <div class="book text-center" onclick="openPopup('booking')">
           <div class="image"><img src="images/book-icon-1.png" alt="" class="img-fluid" /></div>
           <p>BOOK A TABLE</p>
         </div>
@@ -169,7 +170,7 @@
       <div class="imgBottom backImages"><img src="images/bg-2.png" alt="" class="img-fluid" /></div>
       <div class="container py-5">
         <div class="title mb-md-0 mb-5">
-          <div class="head text-center pt-5">
+          <div class="head text-center">
             <h6 class="mainColor">DELIGHTFUL EXPERIENCE</h6>
             <div class="image mb-4">
               <img src="images/separator.svg" alt="" class="img-fluid" />
@@ -192,7 +193,7 @@
             <div class="description pt-4">
               <h3 class="text-light">Breakfast</h3>
               <div class="link">
-                <a class="text-decoration-none active" href="#Menu"
+                <a class="text-decoration-none" href="#Menu"
                   >View Menu
                   <div class="underLine w-100"><span></span><span></span></div
                 ></a>
@@ -207,7 +208,7 @@
             <div class="description pt-4">
               <h3 class="text-light">Appetizers</h3>
               <div class="link">
-                <a class="text-decoration-none active" href="#Menu"
+                <a class="text-decoration-none" href="#Menu"
                   >View Menu
                   <div class="underLine w-100"><span></span><span></span></div
                 ></a>
@@ -222,7 +223,7 @@
             <div class="description pt-4">
               <h3 class="text-light">Drinks</h3>
               <div class="link">
-                <a class="text-decoration-none active" href="#Menu"
+                <a class="text-decoration-none" href="#Menu"
                   >View Menu
                   <div class="underLine w-100"><span></span><span></span></div
                 ></a>
@@ -255,8 +256,8 @@
               </div>
               <div class="contact">
                 <p class="fw-bold text-light mb-0">Book Through Call</p>
-                <div class="link">
-                  <a class="text-decoration-none active d-block m-0 fs-5" href="tel:+201021080042"
+                <div class="link mt-2">
+                  <a class="text-decoration-none d-block m-0 fs-5" href="tel:+201021080042"
                     >+20-102-108-0042
                     <div class="underLine w-100"><span></span><span></span></div
                   ></a>
@@ -316,6 +317,53 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="Menu" class="bg-black text-center">
+      <div class="imgTop backImages"><img src="images/bg-5.png" alt="" class="img-fluid" /></div>
+      <div class="imgBottom backImages"><img src="images/bg-6.png" alt="" class="img-fluid" /></div>
+      <div class="container py-5">
+        <div class="head">
+          <h6 class="mainColor">SPECIAL SELECTION</h6>
+          <div class="image mb-4">
+            <img src="images/separator.svg" alt="" class="img-fluid" />
+          </div>
+          <h2 class="globalHeader mb-3 text-light">Delicious Menu</h2>
+        </div>
+        <div class="links mt-3">
+          <ul class="list-unstyled d-flex justify-content-center align-items-center m-auto p-3 text-light fs-4">
+            <li class="active">
+              BreakFast
+              <div class="underLine active w-100"><span></span><span></span></div>
+            </li>
+            <span class="decoration"></span>
+            <li>
+              Lunch
+              <div class="underLine w-100"><span></span><span></span></div>
+            </li>
+            <span class="decoration"></span>
+            <li>
+              Dinner
+              <div class="underLine w-100"><span></span><span></span></div>
+            </li>
+            <span class="decoration"></span>
+            <li>
+              Drinks
+              <div class="underLine w-100"><span></span><span></span></div>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="row active mt-5 h-100">
+            <div class="col-md-6 part1">
+              <div class="box"></div>
+            </div>
+            <span class="line show"></span>
+            <div class="col-md-6 part2">
+              <div class="box"></div>
             </div>
           </div>
         </div>
@@ -455,6 +503,139 @@
       </div>
       <footer class="py-5 text-center">© 2023 Restaurant. All Rights Reserved | Created by <span class="mainColor">SemiCode</span></footer>
     </section>
+    <div class="popup" data-type="booking" onclick="closePopup()">
+      <div class="container">
+        <div class="box text-center bg-dark px-md-5 px-4 py-3 rounded-3">
+          <i class="fa-regular fa-circle-xmark exit" onclick="closePopup()"></i>
+          <div class="head pt-3">
+            <h6 class="mainColor">RESERVATION</h6>
+            <div class="image mb-2">
+              <img src="images/separator.svg" alt="" class="img-fluid" />
+            </div>
+          </div>
+          <h2 class="mb-4 text-light">Book A Table</h2>
+          <p>
+            Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges
+            will be aplly for online booking. no refundable.
+          </p>
+          <p>
+            Booking request <a class="text-decoration-none m-0 fs-5 mainColor" href="tel:+201021080042"><span>+20-102-108-0042</span></a> or
+            fill out the order form
+          </p>
+          <form>
+            <div class="row py-3">
+              <div class="col-md-6 mb-4">
+                <input type="text" class="form-control" placeholder="Reservation Name..." />
+              </div>
+              <div class="col-md-6 mb-4">
+                <input type="text" class="form-control" placeholder="Phone Number..." />
+              </div>
+              <div class="col-md-6 mb-4">
+                <input type="number" class="form-control" placeholder="Seats..." />
+              </div>
+              <div class="col-md-6 mb-4">
+                <input type="datetime-local" class="form-control" />
+              </div>
+              <div class="col-12 mb-4">
+                <textarea class="form-control" placeholder="Massage..."></textarea>
+              </div>
+              <div class="col-12">
+                <button class="mainBtn w-100"><span>Book A Table</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="popup" data-type="links" onclick="closePopup()">
+      <div class="box text-center bg-black py-5 px-3">
+        <i class="fa-regular fa-circle-xmark exit" onclick="closePopup()"></i>
+        <div class="image1 mb-4"><img src="images/logo.png" alt="" class="img-fluid" /></div>
+        <div class="image2 mb-4 rounded-circle overflow-hidden m-auto"><img src="images/sidebar-image.jpg" alt="" class="w-100" /></div>
+        <div class="links m-auto w-50">
+          <ul class="list-unstyled mb-0 d-flex flex-column align-items-start">
+            <li class="">
+              <div class="link d-flex align-items-center justify-content-start w-100">
+                <span class="decoration me-2 active"></span>
+                <a class="text-decoration-none active" href="#Home">Home </a>
+              </div>
+            </li>
+            <li class="">
+              <div class="link d-flex align-items-center justify-content-start w-100">
+                <span class="decoration me-2"></span>
+                <a class="text-decoration-none" href="#About">About </a>
+              </div>
+            </li>
+            <li class="">
+              <div class="link d-flex align-items-center justify-content-start w-100">
+                <span class="decoration me-2"></span>
+                <a class="text-decoration-none" href="#Our_Story">Our Story </a>
+              </div>
+            </li>
+            <li class="">
+              <div class="link d-flex align-items-center justify-content-start w-100">
+                <span class="decoration me-2"></span>
+                <a class="text-decoration-none" href="#Special">Special Dish </a>
+              </div>
+            </li>
+            <li class="">
+              <div class="link d-flex align-items-center justify-content-start w-100">
+                <span class="decoration me-2"></span>
+                <a class="text-decoration-none" href="#Menu">Menu </a>
+              </div>
+            </li>
+            <li class="">
+              <div class="link d-flex align-items-center justify-content-start w-100">
+                <span class="decoration me-2"></span>
+                <a class="text-decoration-none" href="#Chefs">Our Chefs </a>
+              </div>
+            </li>
+            <li>
+              <div class="link d-flex align-items-center justify-content-start w-100">
+                <span class="decoration me-2"></span>
+                <a class="text-decoration-none" href="#contact">Contact Us </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <h2 class="text-light mt-4">Visit Us</h2>
+        <div class="contact text-secondary text-center my-3">
+          <p><i class="fa-solid fa-location-dot"></i> Delicious City, London 9578, UK</p>
+          <p><i class="fa-regular fa-clock"></i> Daily : 8.00 am to 10.00 pm</p>
+          <p><i class="fa-regular fa-envelope"></i> booking@restaurant.com</p>
+        </div>
+        <span class="decoration mx-auto active"></span>
+        <p class="mt-3 text-light">Booking Request</p>
+        <a class="text-decoration-none m-0 fs-4 mainColor" href="tel:+201021080042"><span>+20-102-108-0042</span></a>
+      </div>
+    </div>
+    <div class="popup" data-type="meals" onclick="closePopup()">
+      <div class="box text-center bg-dark px-md-5 px-4 py-3 rounded-3">
+        <i class="fa-regular fa-circle-xmark exit" onclick="closePopup()"></i>
+        <div class="head pt-3">
+          <h6 class="mainColor">SPECIAL SELECTION</h6>
+          <div class="image mb-2">
+            <img src="images/separator.svg" alt="" class="img-fluid" />
+          </div>
+        </div>
+        <div class="content"></div>
+        <button class="sc-carousel-button prevmeal d-flex" onclick="prevMeal()"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="sc-carousel-button nextmeal d-flex" onclick="nextMeal()"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+    <div class="lodging ">
+      <div class="content">
+        <div class="spinner m-auto"></div>
+        <div class="textLoading mt-3">
+          <span data-text="D" class="letter me-2 "> <span class="inner">D</span> </span>
+          <span data-text="E" class="letter me-2"> <span class="inner">E</span> </span>
+          <span data-text="L" class="letter me-2"> <span class="inner">L</span> </span>
+          <span data-text="I" class="letter me-2">  <span class="inner">I</span></span>
+          <span data-text="C" class="letter me-2"> <span class="inner">C</span> </span>
+          <span data-text="I" class="letter "> <span class="inner">I</span></span>
+        </div>
+      </div>
+    </div>
     <script src="js/bootstrap.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/function.js"></script>

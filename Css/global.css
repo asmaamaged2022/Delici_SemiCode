@@ -1,5 +1,6 @@
 :root {
   --mainColor: rgb(227, 197, 144);
+  --gray: #a7a7a7;
 }
 * {
   margin: 0;
@@ -10,6 +11,7 @@ body {
   font-family:
     DM Sans,
     sans-serif;
+  position: relative;
 }
 h1,
 h2,
@@ -71,7 +73,7 @@ h6 {
 .mainBtn:hover span {
   color: black;
 }
-
+li .underLine span,
 a .underLine span {
   height: 1px;
   background-color: var(--mainColor);
@@ -79,11 +81,12 @@ a .underLine span {
   transform: scaleX(0);
   transition-duration: 0.5s;
 }
+li:hover .underLine span,
 a:hover .underLine span {
   transform: scaleX(1);
 }
-
-.underLine.active span {
+li.active .underLine span,
+a.active .underLine span {
   transform: scaleX(1);
 }
 
@@ -94,7 +97,7 @@ a:hover .underLine span {
   width: 100px;
   margin-inline: auto;
 }
-.link{
+.link {
   width: fit-content;
   margin-inline: auto;
 }
@@ -106,4 +109,68 @@ a:hover .underLine span {
 .link a:hover,
 .link a.active {
   color: var(--mainColor);
+}
+.lodging {
+  position: fixed;
+  inset: 0;
+  background-color: var(--mainColor);
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+.lodging.show {
+  z-index: 300;
+  opacity: 1;
+}
+.lodging .spinner {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #ccc;
+  border-top: 4px solid #432f2f;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.lodging span {
+  position: relative;
+  font-size: 80px;
+  color: black;
+  display: inline-block;
+  background-color: transparent;
+}
+.lodging span::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.inner {
+  display: inline-block;
+  animation: lodging 3s linear;
+  animation-iteration-count: 1;
+  opacity: 0;
+}
+.letter:nth-child(1) .inner {
+  animation-delay: 0s;
+}
+.letter:nth-child(2) .inner {
+  animation-delay: 0.3s;
+}
+.letter:nth-child(3) .inner {
+  animation-delay: 0.6s;
+}
+.letter:nth-child(4) .inner {
+  animation-delay: 0.9s;
+}
+.letter:nth-child(5) .inner {
+  animation-delay: 1.2s;
+}
+.letter:nth-child(6) .inner {
+  animation-delay: 1.5s;
 }

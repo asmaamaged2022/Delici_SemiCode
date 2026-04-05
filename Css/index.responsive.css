@@ -1,19 +1,34 @@
 @media (max-width: 1300px) {
-  /* global */
+  /*----------------------------------global----------------------------------*/
   .mainBtn {
     padding: 10px 20px;
   }
   .mainBtn span {
     font-size: 15px;
   }
-  /* header */
+  .popup[data-type="booking"] .box {
+    width: 280px;
+  }
+  .popup[data-type="links"] .box {
+    width: 300px;
+  }
+  .popup[data-type="meals"] .box {
+    width: 300px;
+  }
+  .popup[data-type="meals"] .box .data .image {
+    height: 200px;
+  }
+  .popup[data-type="meals"] .box > button {
+    top: 40%;
+  }
+  /*------------------------------header----------------------------------*/
   .My-carousel-inner .My-carousel-item h2 {
     font-size: 30px;
   }
   .My-carousel-inner .My-carousel-item p {
     font-size: 12px;
   }
-  /* About-Us */
+  /*----------------------------------About-Us----------------------------------*/
   #About .content {
     width: 80%;
   }
@@ -54,14 +69,40 @@
     left: 0;
     bottom: 20px;
   }
+  /* ---------------------Menu------------------------- */
+  #Menu .content .row .line {
+    display: none;
+  }
+  #Menu .content .row .box .item .image {
+    width: 300px;
+  }
+  #Menu .content .row .box .item .info .head {
+    flex-direction: column;
+    align-items: start;
+  }
+  #Menu .content .row .box .item .info .head .lines {
+    display: none;
+  }
+  /* ---------------------Special------------------------ */
   #Special .part:nth-of-type(1) {
     height: 100vh;
   }
+  /* ---------------------contact------------------------ */
   #contact .mainBox {
     width: 95%;
   }
 }
 @media (min-width: 371px) and (max-width: 1300px) {
+  /* global */
+  .popup[data-type="booking"] .box,
+  .popup[data-type="links"] .box,
+  .popup[data-type="meals"] .box {
+    width: 350px;
+  }
+  .popup[data-type="meals"] .box > button {
+    top: 45%;
+  }
+
   /* header */
   .My-carousel-inner .My-carousel-item h2 {
     font-size: 40px;
@@ -81,11 +122,33 @@
 
     bottom: 20px;
   }
+  /* ---------------------Menu------------------------- */
+
+  #Menu .content .row .box .item .image {
+    width: 250px;
+  }
+  /* ---------------------contact------------------------ */
   #contact .mainBox {
-    width: 90%;
+    width: 75%;
   }
 }
 @media (min-width: 577px) and (max-width: 1300px) {
+  /* global */
+  .popup[data-type="booking"] .box {
+    width: 450px;
+  }
+  .popup[data-type="links"] .box {
+    width: 400px;
+  }
+  .popup[data-type="meals"] .box {
+    width: 450px;
+  }
+  .popup[data-type="meals"] .box .data .image {
+    height: 250px;
+  }
+  .popup[data-type="meals"] .box > button {
+    top: 50%;
+  }
   /*---------------------------------- OUR STORY------------------------------- */
   #Our_Story .part:nth-of-type(2) .item .box .imageBackBottom {
     left: 10%;
@@ -98,9 +161,27 @@
 
     bottom: 25px;
   }
+  /*---------------------------------- Menu------------------------------- */
+  #Menu .content .row .box .item .info .head {
+    flex-direction: row;
+    align-items: center;
+  }
+  #Menu .content .row .box .item .info .head .lines {
+    display: flex;
+  }
 }
 @media (min-width: 769px) and (max-width: 1300px) {
-  /* header */
+  /* global */
+  .popup[data-type="booking"] .box {
+    width: 550px;
+  }
+  .popup[data-type="meals"] .box {
+    width: 550px;
+  }
+  .popup[data-type="meals"] .box .data .image {
+    height: 300px;
+  }
+  /*----------------------------------header---------------------------------- */
   .My-carousel-inner .My-carousel-item h2 {
     font-size: 50px;
   }
@@ -122,11 +203,44 @@
     width: 180px;
     bottom: 25px;
   }
+  /* ---------------------Menu------------------------- */
+  #Menu .content .row .line {
+    display: block;
+  }
+  #Menu .content .row .box .item .image {
+    width: 300px;
+  }
+  #Menu .content .row .box .item .info .head {
+    flex-direction: column;
+    align-items: start;
+  }
+  #Menu .content .row .box .item .info .head .lines {
+    display: none;
+  }
+  /* ---------------------contact------------------------ */
   #contact .mainBox {
     width: 65%;
   }
 }
 @media (min-width: 992px) and (max-width: 1300px) {
+  /* global */
+  .popup[data-type="booking"] .box,
+  .popup[data-type="meals"] .box {
+    width: 600px;
+  }
+
+  /*---------------------------------- Menu------------------------------- */
+  #Menu .content .row .box .item .image {
+    width: 200px;
+  }
+  #Menu .content .row .box .item .info .head {
+    flex-direction: row;
+    align-items: center;
+  }
+  #Menu .content .row .box .item .info .head .lines {
+    display: flex;
+  }
+  /* ---------------------contact------------------------ */
   #contact .mainBox {
     width: 50%;
   }
