@@ -129,7 +129,7 @@
   }
   /* ---------------------contact------------------------ */
   #contact .mainBox {
-    width: 75%;
+    width: 85%;
   }
 }
 @media (min-width: 577px) and (max-width: 1300px) {
