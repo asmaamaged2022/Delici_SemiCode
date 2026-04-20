@@ -82,7 +82,7 @@ document.addEventListener("keyup", function (e) {
     prevButton();
   }
 });
-setInterval(NextButton, 10000);
+// setInterval(NextButton, 10000);
 liInMenuCategory.forEach(function (li, index) {
   li.addEventListener("click", function () {
     switchLinks(index);

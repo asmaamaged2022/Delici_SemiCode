@@ -4,8 +4,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 100vh;
-  max-height: 100dvh;
+  height: 100%;
   z-index: -1;
   overflow-y: auto;
   transition-duration: 0.8s;
@@ -21,6 +20,7 @@
   transform: translateY(-100px);
   opacity: 0;
   transition-duration: 1s;
+
 }
 .popup[data-type="booking"].show .box {
   transform: translateY(0px);
@@ -76,6 +76,7 @@
   transform: translateX(-100px);
   opacity: 0;
   transition-duration: 1s;
+  min-height: 100%;
 }
 .popup[data-type="links"].show .box {
   transform: translateX(0px);
